@@ -4,12 +4,12 @@ Check_Gluster
 #Gluster Check Plugin#
 Nagios health check for GlusterFS 3.3.  It checks a volumes status, and if all the bricks are present.
 
-
 #CLI Usage#
 ```
 nagios@monitor:~/> ./check_gluster.pl -v data -n 2
 GLUSTER OK - Volume data is Stable
 ```
+Where -v is the volume name, and -n is the expected number of bricks.
 
 #Called via NRPE#
 ```

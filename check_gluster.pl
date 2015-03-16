@@ -7,11 +7,12 @@ use Nagios::Plugin::Getopt;
 
 #Check_GLuster.pl
 #John C. Bertrand <john.bertrand@gmail.com>
+#Florian Panzer <rephlex@rephlex.de>
 # This nagios plugins checks the status 
 # and checks to see if the volume has the correct
 # number of bricks
-# Checked against gluster 3.2.7
-# Rev 1 2012.09.12
+# Checked against gluster 3.2.7 and 3.6.2
+# Rev 2 2015.03.16
 
 #SET THESE
 my $SUDO="/usr/bin/sudo";
@@ -47,7 +48,7 @@ my $returnMessage="~";
 my $result=`$SUDO $GLUSTER volume info $volume`;
 
 if ($result =~ m/Status: Started/){
-    if ($result =~ m/Number of Bricks: (\d+)/){
+    if ($result =~ m/Number of Bricks: .*(\d+)/){
         my $bricks=$1;
 
         if ($bricks != $bricktarget){

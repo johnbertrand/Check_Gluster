@@ -6,10 +6,11 @@ Nagios health check for GlusterFS 3.3.  It checks a volumes status, and if all t
 
 #CLI Usage#
 ```
-nagios@monitor:~/> ./check_gluster.pl -v data -n 2
+nagios@monitor:~/> ./check_gluster.pl -v data -n 2 [-s|--sudo]
 GLUSTER OK - Volume data is Stable
 ```
 Where -v is the volume name, and -n is the expected number of bricks.
+If you want your privileges escalated, use -s or --sudo respectively.
 
 #Called via NRPE#
 ```

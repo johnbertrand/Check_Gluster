@@ -13,8 +13,8 @@ use Nagios::Plugin::Getopt;
 # This nagios plugins checks the status
 # and checks to see if the volume has the correct
 # number of bricks
-# Checked against gluster 3.2.7 and 3.6.2
-# Rev 3 2016.03.22
+# Checked against gluster 3.2.7 and 3.6.2 and 3.8.1
+# Rev 4 2016.07.27
 
 #SET THESE
 my $SUDO="/usr/bin/sudo";
